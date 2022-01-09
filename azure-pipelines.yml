@@ -22,8 +22,8 @@ steps:
   displayName: 'npm install and build'
 - task: Npm@1
   inputs:
-    command: 'npm run test:ci'
-#    customCommand: 'run-script junit'
+    command: 'custom'
+    customCommand: 'run-script junit'
 - task: Npm@1
   inputs:
     command: 'custom'
