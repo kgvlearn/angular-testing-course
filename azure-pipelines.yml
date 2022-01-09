@@ -20,3 +20,23 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run-script junit'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run-script coverage'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run-script test'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run script test:coverage'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run-script e2e'
