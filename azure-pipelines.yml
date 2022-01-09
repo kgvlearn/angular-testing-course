@@ -17,13 +17,13 @@ steps:
 
 - script: |
     npm install -g @angular/cli
-    npm install
+    npm install@latest
     ng build --prod
   displayName: 'npm install and build'
-#- task: Npm@1
-#  inputs:
-#    command: 'custom'
-#    customCommand: 'run-script junit'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run-script junit'
 - task: Npm@1
   inputs:
     command: 'custom'
